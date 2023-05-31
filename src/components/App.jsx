@@ -3,6 +3,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
+import css from './app.module.css';
 
 class App extends Component {
   state = {
@@ -25,7 +26,7 @@ class App extends Component {
       100 - ((neutral + bad) * 100) / total
     );
     return (
-      <div>
+      <div className={css.wrapper}>
         <Section title="Please leave feedback;)">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}

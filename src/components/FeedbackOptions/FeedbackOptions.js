@@ -1,10 +1,17 @@
 import React from 'react';
+import css from './FeedbackOptions.module.css';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <div className={css.buttonsWrapper}>
       {options.map(name => (
-        <button key={name} name={name} onClick={onLeaveFeedback} type="button">
+        <button
+          className={css.optionButton}
+          key={name}
+          name={name}
+          onClick={onLeaveFeedback}
+          type="button"
+        >
           {name}
         </button>
       ))}
